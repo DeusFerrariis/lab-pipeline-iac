@@ -16,6 +16,7 @@
         {
           devShells.default = mkShell {
             buildInputs = [
+              poetry
               python311
               python311Packages.jedi
               nodejs
