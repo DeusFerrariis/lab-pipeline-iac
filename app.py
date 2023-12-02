@@ -1,6 +1,6 @@
 import os
 from aws_cdk import App, Environment
-from lab_pipeline_iac.main import MyStack
+from lab_pipeline_iac.main import LabPipelineStack
 
 # for development, use account/region from cdk cli
 dev_env = Environment(
@@ -9,7 +9,7 @@ dev_env = Environment(
 )
 
 app = App()
-MyStack(app, "lab-pipeline-iac-dev", env=dev_env)
+LabPipelineStack(app, "lab-pipeline-iac-dev", env=dev_env)
 # MyStack(app, "lab-pipeline-iac-prod", env=prod_env)
 
 app.synth()
